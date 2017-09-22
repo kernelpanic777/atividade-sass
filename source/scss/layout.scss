@@ -1,0 +1,27 @@
+@mixin navbar {
+	background-color: white;
+	color: purple;
+	border: 1px solid purple;
+}
+
+%placeholder {
+	color: red;
+}
+
+.navbar {
+
+	@include navbar;
+
+	.navbar-brand {
+		font-size: 50px;
+	}
+
+	.navbar-menu {
+		&:hover{
+			font-weight: bold;
+			@extend %placeholder;
+		}
+	}
+
+}
+
